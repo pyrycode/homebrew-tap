@@ -5,21 +5,21 @@
 class Pyry < Formula
   desc "Process supervisor for Claude Code"
   homepage "https://github.com/pyrycode/pyrycode"
-  version "0.5.2"
+  version "0.5.3"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/pyrycode/pyrycode/releases/download/v0.5.2/pyry_0.5.2_Darwin_x86_64.tar.gz"
-      sha256 "a659bdd9e63bad9b1f1b820c50c024410b08b07be72a2f069a913306c2df6a2f"
+      url "https://github.com/pyrycode/pyrycode/releases/download/v0.5.3/pyry_0.5.3_Darwin_x86_64.tar.gz"
+      sha256 "2e7973e368c74aca8c55bd976480f20efe84af4f5f5456ef83ab24516df26980"
 
       define_method(:install) do
         bin.install "pyry"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/pyrycode/pyrycode/releases/download/v0.5.2/pyry_0.5.2_Darwin_arm64.tar.gz"
-      sha256 "98d0c70fe5177e4c6ffc46b61650b43c92d4b6db030f4d3698224472ac9b6873"
+      url "https://github.com/pyrycode/pyrycode/releases/download/v0.5.3/pyry_0.5.3_Darwin_arm64.tar.gz"
+      sha256 "a3f1e3a23150f0538725f133b5201e60465e262670cf185d3c8b9325333121b9"
 
       define_method(:install) do
         bin.install "pyry"
@@ -29,15 +29,15 @@ class Pyry < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/pyrycode/pyrycode/releases/download/v0.5.2/pyry_0.5.2_Linux_x86_64.tar.gz"
-      sha256 "62749735298c7d11e627ec7a0a4869c81df758956a162e257dcb0ece8ff578d0"
+      url "https://github.com/pyrycode/pyrycode/releases/download/v0.5.3/pyry_0.5.3_Linux_x86_64.tar.gz"
+      sha256 "e809e78904069d36aca66241cf81a6af44718bdd1d902ec8c014653905536208"
       define_method(:install) do
         bin.install "pyry"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/pyrycode/pyrycode/releases/download/v0.5.2/pyry_0.5.2_Linux_arm64.tar.gz"
-      sha256 "f9fe901c299af8cf65b1fcbc31693886e887c36ae8712d4bb811095ea5585e48"
+      url "https://github.com/pyrycode/pyrycode/releases/download/v0.5.3/pyry_0.5.3_Linux_arm64.tar.gz"
+      sha256 "505b0d77dcd8ba9510839a6b1714b6c73d1bb1128d5d8b0c40a8753d4b3e7280"
       define_method(:install) do
         bin.install "pyry"
       end
